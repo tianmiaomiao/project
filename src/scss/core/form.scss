@@ -1,0 +1,125 @@
+$white_color    : #fff;
+$border_color   : #f2f2f2;
+$gray_color     : #939393;
+$black_clor     : #333;
+$red_color      : #ef4352;
+$green_color    : #10b524;
+
+.alert-warning{
+    background-color: #ffdfdf;
+    padding: .12rem .18rem;
+    @include dis_flex;
+    @include align-items;
+
+    p{
+        font-size: .26rem;
+        line-height: .36rem;
+        color: $gray_color;
+        @include boxflex(1)
+    }
+}
+.choose{
+    position: absolute;
+    right: 0;
+    top:.15rem;
+    font-size: 0.3rem;
+    background-size: .18rem auto;
+    padding-right: .3rem;
+    text-align: right;
+    line-height: .4rem;
+}
+
+.btn{
+    text-align: center;
+    line-height: .84rem;
+    background-color: $red_color;
+    color: $white_color;
+    font-size: .34rem;
+    display: block;
+    max-width: 100%;
+    width: 6.5rem;
+    margin: 0 auto;
+    border-radius: .04rem;
+
+    &.disabled{
+        color:  rgba(99,99,99,.5);
+        background-color: rgba(205,205,205,.5);
+    }
+}
+.form-wrap{
+    padding: 0 .26rem;
+
+    .btn-group{
+        padding-top: .4rem;
+    }
+
+    .form-group{
+        position: relative;
+        margin-top: .42rem;
+
+        &:first-child{
+            margin-top: .22rem;
+        }
+        &.form-flex{
+            @include dis_flex;
+        }
+    }
+    .form-info{
+        font-size: .3rem;
+        color: #333;
+        line-height: .4rem;
+        padding:0 .24rem;
+    }
+    .form-control{
+        width: 100%;
+        height: .7rem;
+        line-height: .4rem;
+        padding:.15rem .24rem;
+        border:0;
+        border-radius: 0;
+        border-bottom: 1px solid #d0d0d0;
+        color: #333;
+        font-size: .3rem;
+        background: #fff;
+        @include setPlaceholder();
+
+        &.box-flex{
+            @include boxflex(1)
+        }
+    }
+    .form-topic{
+        margin-top: .16rem;
+        font-size: .28rem;
+        color: $gray_color;
+        text-align: center;
+        padding:.06rem 0;
+        line-height: .4rem;
+    }
+    .form-title{
+        font-size: .42rem;
+        color: $black_clor;
+        text-align: center;
+        line-height: .66rem;
+    }
+    .btn-code{
+        margin-left: .42rem;
+        height: .7rem;
+        line-height: .4rem;
+        padding:.15rem .14rem;
+        color: #507DAF;
+
+        &.disabled{
+            color: #939393;
+        }
+    }
+
+    .form-error{
+        font-size: .24rem;
+        color: $red_color;
+        line-height: .24rem;
+        height: .24rem;
+        margin-top: .2rem;
+        padding: 0 .24rem;
+    }
+
+}

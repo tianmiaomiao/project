@@ -1,0 +1,13 @@
+{
+    "md-icon-clear"     : "./images/md-icon-clear.png",
+    "md-icon-tip"       : "./images/md-icon-tip.png",
+    "md-icon-phone"     : "./images/md-icon-phone.png",
+    "md-icon-eye"       : "./images/md-icon-eye.png",
+    "md-icon-right"     : "./images/md-icon-right.png",
+    "md-icon-backspace" : "./images/md-icon-backspace.png",
+    "md-icon-loading"   : "./images/md-icon-loading.gif",
+    "md-icon-checked"   : "./images/md-icon-check.png",
+    "md-icon-unChecked" : "./images/md-icon-uncheck.png",
+    "md-icon-error"     : "./images/md-icon-error.png",
+    "md-icon-bottom"    : "./images/md-icon-bottom.png"
+}

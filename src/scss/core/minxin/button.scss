@@ -1,0 +1,72 @@
+@mixin button-variant($color : #EF4352, $background : #fff, $border : #EF4352) {
+    $background-hover : $background;
+    @if($background != #fff){
+        $background-hover: darken($background, 8%);
+    }
+
+    color: $color;
+    background-color: $background;
+    cursor: pointer;
+    @include setAllLine($border,$radius-size-normal);
+
+    &:focus {
+        color: $color;
+        background-color: $background-hover;
+    }
+    &:hover ,
+    &.hover {
+        color: $color;
+        background-color: $background-hover;
+    }
+
+    &:visited {
+        color: $color;
+    }
+
+    &:active,
+    &.active{
+        color: $color;
+        background-color: $background-hover;
+
+        &.hover,
+        &.focus {
+            color: $color;
+            background-color: $background-hover;
+        }
+    }
+    &.line{
+        &.disabled,
+        &[disabled]{
+            color: rgba($color,.5)!important;
+            background-color: $background!important;
+            &:before{
+                opacity: 1!important;
+            }
+        }
+    }
+    &.disabled,
+    &[disabled]{
+        pointer-events: none;
+        &,
+        &:hover,
+        &.hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: rgba($color,.5);
+            background-color: rgba($background,.5);
+
+            &:before{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+// Button sizes
+@mixin button-size($font-size, $height) {
+    font-size: $font-size;
+    height: $height;
+    line-height: $height;
+}

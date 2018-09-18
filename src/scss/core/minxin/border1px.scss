@@ -1,0 +1,111 @@
+
+@mixin hairline($direction ,$color){
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border:1px solid transparent;
+    border-#{$direction}-color:$color;
+
+    @if ($direction == top) {
+        transform-origin: 50% 100%;
+        -webkit-transform-origin: 50% 100%;
+        @media (min-resolution: 2dppx) {
+            transform: scaleY(0.5) translateY(-100%);
+            -webkit-transform: scaleY(0.5) translateY(-100%);
+        }
+    }@else if($direction == bottom){
+        transform-origin: 50% 0;
+        -webkit-transform-origin: 50% 0;
+        @media (min-resolution: 2dppx) {
+            transform: scaleY(0.5) translateY(100%);
+            -webkit-transform: scaleY(0.5) translateY(100%);
+        }
+    }@else if($direction == left){
+        transform-origin: 100% 50%;
+        -webkit-transform-origin: 100% 50%;
+        @media (min-resolution: 2dppx) {
+            transform: scaleX(0.5) translateX(-100%);
+            -webkit-transform: scaleX(0.5) translateX(-100%);
+        }
+    }@else if($direction == right){
+        transform-origin: 0 50%;
+        -webkit-transform-origin: 0 50%;
+        @media (min-resolution: 2dppx) {
+            transform: scaleX(0.5) translateX(100%);
+            -webkit-transform: scaleX(0.5) translateX(100%);
+        }
+    }
+}
+
+@mixin setTopLine($color: #e6e6e6) {
+    &::after{
+        top:0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        @include hairline(top,$color);
+    }
+}
+
+@mixin setBottomLine($color: #e6e6e6) {
+    &::before{
+        bottom:0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        @include hairline(bottom,$color);
+    }
+}
+
+@mixin setLeftLine($color: #e6e6e6) {
+    &::after{
+        left: 0;
+        top:0;
+        bottom: 0;
+        width: 2px;
+        @include hairline(left,$color);
+    }
+}
+
+@mixin setRightLine($color: #e6e6e6) {
+    &::before{
+        right: 0;
+        top:0;
+        bottom: 0;
+        width: 2px;
+        @include hairline(right,$color);
+    }
+}
+@mixin setAllLine($color: #e6e6e6,$radius:0,$borderWidth:1px) {
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        border: solid $borderWidth $color;
+        box-sizing: border-box;
+        transform-origin: 0 0;
+        transform: scale(0.5);
+        z-index: 2;
+        pointer-events: none;
+        border-radius: $radius;
+    }
+}
+
+.md-top-line{
+    @include setTopLine()
+}
+.md-bottom-line{
+    @include setBottomLine()
+}
+.md-left-line{
+    @include setLeftLine()
+}
+.md-right-line{
+    @include setRightLine()
+}
+.md-border-line{
+    @include setAllLine()
+}

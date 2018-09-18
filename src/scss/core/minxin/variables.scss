@@ -1,0 +1,111 @@
+/*
+ * Variables
+ * Created by tianmiao on 2018/5/24.
+ */
+
+/*
+ * iosX bottom size
+ */
+$iosx-bottom-size   : .8rem;
+
+/*
+ * color style
+ */
+$color-white        : #fff;
+$color-red          : #EF4352;
+$color-yellow       : #FF9412;
+$color-blue         : #4576FF;
+$color-blue-dark    : #507DAF;
+$color-black        : #333;
+$color-gray-dark    : #939393;
+$color-gray-middle  : #BDBDBD;
+$color-gray-light   : #ccc;
+$color-line         : #E6E6E6;
+
+/*
+ * background color style
+ */
+$bg-color-base      : #F2F2F2;
+$bg-color-white     : #fff;
+
+/*
+ * font size style
+ */
+
+$font-heading-large     : .48rem;
+$font-heading-medium    : .42rem;
+$font-heading-normal    : .34rem;
+$font-heading-small     : .3rem;
+
+$font-body-large        : .3rem;
+$font-body-medium       : .28rem;
+$font-body-normal       : .26rem;
+$font-body-small        : .24rem;
+$font-body-minx         : .2rem;
+
+$font-input-large       : .6rem;
+$font-input-medium      : .42rem;
+$font-input-normal      : .34rem;
+
+$font-button-large      : .34rem;
+$font-button-normal     : .32rem;
+$font-button-small      : .24rem;
+
+$radius-size-normal     : .04rem;
+
+/*
+ * line-height size style
+ */
+$line-height-large      : .5rem;
+$line-height-medium     : .46rem;
+$line-height-normal     : .42rem;
+$line-height-small      : .38rem;
+
+
+/*
+ * button style
+ */
+$button-size-default    : .8rem;
+$button-size-large      : .84rem;
+$button-size-small      : .56rem;
+
+$button-bg-default      :  $color-white;
+$button-border-default  :  $color-white;
+$button-color-default   :  $color-red;
+
+$button-bg-primary      :  $color-red;
+$button-border-primary  :  $color-red;
+$button-color-primary   :  $color-white;
+$button-line-primary    :  $color-red;
+
+
+/*
+ * mask style
+ */
+$mask-opacity   : 0.4;
+$zIndex         : 1000;
+
+/*
+ * dialog style
+ */
+$dialog-text-color  : #000;
+$dialog-text-size   : $font-body-medium;
+$dialog-title-size  : $font-heading-normal;
+$dialog-bg-color    : $bg-color-white;
+$dialog-btn-size    : $font-button-large;
+
+/*
+ * keyboard style
+ */
+
+$keyboard-box-width     : 100%;
+$keyboard-box-height    : 4.2rem;
+
+/*
+ * popup style
+ */
+$popup-title-color      : $color-black;
+$popup-confirm-color    : $color-blue;
+$popup-title-height     : .96rem;
+$popup-title-size       : $font-heading-normal;
+$popup-title-bg         : #f9f9f9;
