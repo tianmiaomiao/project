@@ -1,6 +1,6 @@
-# sina_finance_m
+# demo
 
-> jr.sina.com.cn
+> A Vue.js project
 
 ## Build Setup
 
