@@ -1,6 +1,0 @@
-//单行省略号
-@mixin text-overflow {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
